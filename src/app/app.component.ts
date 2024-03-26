@@ -16,4 +16,7 @@ export class AppComponent implements OnInit {
     this.produits=createProducts(16); 
   
   }
+  isPromo(produit:SimpleProduct):boolean{
+    return produit.promo;
+  }
 }
