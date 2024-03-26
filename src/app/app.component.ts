@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SimpleProduct } from './interface/produit';
-import { createProducts } from './donne/produit.generator';
+import { createProducts, createProduct} from './donne/produit.generator';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,10 @@ import { createProducts } from './donne/produit.generator';
 export class AppComponent implements OnInit {
   // title = 'edacyTP1';
   produits!: SimpleProduct[];
+  produit:SimpleProduct=createProduct();
 
   ngOnInit(){
-    this.produits=createProducts(); 
-    console.log(this.produits) 
+    this.produits=createProducts(16); 
+  
   }
 }

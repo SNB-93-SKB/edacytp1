@@ -1,1 +1,16 @@
-<h1>bonjour edacy</h1>
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="product-card">
+            <img src="{{produit.image}}" alt="">
+            
+            <div class="product-card-body">
+                <h3 class="product-card-title">
+                    {{produit.name}}
+                </h3>
+                <!-- <p class="product-card-description"> </p> -->
+                <span class="promo-badge">Promo:{{produit.promo ? produit.promoVal: ""}}% off</span>
+                <span class="product-card-price">{{produit.price}}</span>
+            </div>
+        </div>
+    </div>
+</div>
