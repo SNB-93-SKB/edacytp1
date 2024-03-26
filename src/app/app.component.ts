@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   isPromo(produit:SimpleProduct):boolean{
     return produit.promo;
   }
-  addToCard(){
-    console.log('evenement');
+  addToCard(ev:any){
+    console.log(ev);
   }
 }
