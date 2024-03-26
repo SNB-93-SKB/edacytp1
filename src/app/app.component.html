@@ -1,5 +1,5 @@
 <div class="grid-container">
-    <div class="grid-item">
+    <div class="grid-item" *ngFor="let produit of produits">
         <div class="product-card">
             <img [src]="produit.image" alt="">
             
@@ -14,6 +14,7 @@
 
                 </ng-template>
                 <span class="product-card-price">{{produit.price}}</span>
+                <button (click)="addToCard()">save</button>
             </div>
         </div>
     </div>
