@@ -6,7 +6,7 @@ export function createProduct():SimpleProduct{
         id:faker.datatype.uuid(),
         name:faker.commerce.productName(),
         description:faker.commerce.productDescription(),
-        image:faker.image.imageUrl(640, 480, 'tomate', true),
+        image:faker.image.imageUrl(640, 480, 'book', true),
         price:faker.commerce.price(100,1000,2),
         category:faker.commerce.department(),
         promo:hasPromo,

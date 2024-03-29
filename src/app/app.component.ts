@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   produit:SimpleProduct=createProduct();
 
   ngOnInit(){
-    this.produits=createProducts(16); 
+    this.produits=createProducts(20); 
   
   }
   isPromo(produit:SimpleProduct):boolean{
