@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   // title = 'edacyTP1';
   produits!: SimpleProduct[];
   produit:SimpleProduct=createProduct();
-
+public message= 'Acceuil cherche';
   ngOnInit(){
     this.produits=createProducts(20); 
   
