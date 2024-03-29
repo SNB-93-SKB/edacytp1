@@ -10,10 +10,12 @@ import { createProducts, createProduct} from './donne/produit.generator';
 export class AppComponent implements OnInit {
   // title = 'edacyTP1';
   produits!: SimpleProduct[];
+  productCache!:SimpleProduct[];
   produit:SimpleProduct=createProduct();
 public message= 'Acceuil cherche';
   ngOnInit(){
-    this.produits=createProducts(20); 
+    this.produits=createProducts(20);
+    this.productCache=this.produits; 
   
   }
   isPromo(produit:SimpleProduct):boolean{
@@ -22,4 +24,13 @@ public message= 'Acceuil cherche';
   addToCard(ev:any){
     console.log(ev);
   }
+  filterProduit(text:string){
+this.handleFiltering(text);
+  }
+private handleFiltering(t:string){
+  if(t===null || !t.length){
+    this.produits=this.productCache;
+  }
+this.produits=this.produits.filter((_produit) => _produit.name.includes(t));
+}
 }
