@@ -19,7 +19,10 @@
 
                 </ng-template>
                 <span class="product-card-price">{{produit.price}}</span>
-                <button (click)="addToCard($event)">+save</button>
+                <app-resuable-buttons [isSecondaire]="true" (buttonClicked)="addToCard(produit)">
+*Promo conditons
+                </app-resuable-buttons>
+                
             </div>
         </div>
     </div>

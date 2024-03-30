@@ -1,0 +1,16 @@
+.pricipale{
+    background-color: rgba(88, 88, 168, 0.468);
+    font-size: 16px;
+   border-radius: 10px; 
+   margin: 7px;
+   font-weight: 700;
+   
+}
+.secondaire{
+background-color: rgba(234, 11, 85, 0.468);
+font-size: 16px; 
+margin: 7px;
+font-weight: 700;
+color:white;
+
+}

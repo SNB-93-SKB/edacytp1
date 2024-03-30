@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SimpleProduct } from './interface/produit';
-import { createProducts, createProduct} from './donne/produit.generator';
+import { SimpleProduct } from './shared/interface/produit';
+import { createProduct, createProducts } from './shared/donne/produit.generator';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +21,8 @@ public message= 'Acceuil cherche';
   isPromo(produit:SimpleProduct):boolean{
     return produit.promo;
   }
-  addToCard(ev:any){
-    console.log(ev);
+  addToCard(prod:SimpleProduct){
+    console.log(prod);
   }
   filterProduit(text:string){
 this.handleFiltering(text);
